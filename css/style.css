@@ -1,0 +1,298 @@
+body{
+  margin: 0;
+  background-color: black;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1, h2, p{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+.hidden{
+  display: none;
+}
+
+.btn{
+  position: relative;
+  display: block;
+  font-size: 18px;
+  letter-spacing: .1em;
+  font-weight: bold;
+  width: 200px;
+  margin: 0 auto;
+  line-height: 3;
+  text-align: center;
+  background-color: #e92121;
+  color: #eee;
+}
+
+.btn::after{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 8px;
+  content: '>>';
+}
+
+.logo{
+  font-family: constantia;
+  position: fixed;
+  top: 24px;
+  bottom: auto;
+  left: 24px;
+  right: auto;
+  padding: 0 8px;
+  background-color: #fff;
+  color: black;
+  z-index: 4;
+}
+
+span{
+  position: fixed;
+  top: 24px;
+  bottom: auto;
+  left: auto;
+  right: 24px;
+  background-color: #f7a02f;
+  z-index: 4;
+}
+
+span i{
+  font-size: 36px;
+  padding: 0 8px;
+  color: black;
+  cursor: pointer;
+}
+
+nav{
+  position: fixed;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 4;
+  transform: translateY(30px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .3s, opacity .3s;
+}
+
+nav.show{
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+nav a{
+  display: block;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 3;
+  color: #eee;
+}
+
+nav a:hover{
+  text-decoration: underline;
+}
+
+.mask{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #e0240b;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+}
+
+.mask.show{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.contact{
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  text-align: center;
+  background-color: #fff;
+  z-index: 2;
+  transform: translateY(150px);
+  transition: transform .3s;
+}
+
+.contact.appear{
+  transform: translateY(0);
+}
+
+.contact a{
+  display: inline-block;
+  font-family: constantia;
+  font-size: 36px;
+  font-weight: bold;
+  width: 50%;
+  margin: 0 auto;
+  line-height: 3;
+}
+
+.contact a + a{
+  border-left: 1px solid black;
+}
+
+.contact a:hover{
+  opacity: .7;
+}
+
+header{
+  height: 600px;
+  text-align: center;
+}
+
+header img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header p{
+  position: absolute;
+  top: auto;
+  bottom: 200px;
+  left: 0;
+  right: 0;
+  font-size: 24px;
+  margin: 36px auto;
+  width: 60%;
+  line-height: 3;
+  background-color: #333;
+}
+
+.rec{
+  position: relative;
+  width: 80%;
+  margin: 24px auto;
+  text-align: center;
+}
+
+.rec img{
+  width: 100%;
+  height: 100%;
+}
+
+.rec div{
+  position: absolute;
+  top: 36px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.rec h2{
+  font-family: constantia;
+  font-size: 28px;
+  letter-spacing: .1em;
+  padding-top: 12px;
+}
+
+.rec p{
+  margin: 24px auto;
+  font-weight: bold;
+}
+
+.work, .notice{
+  width: 90%;
+  margin: 0 auto 24px;
+  border-left: 1px solid #888;
+  border-right: 1px solid #888;
+}
+
+.work h1, .notice h1, .overview h1{
+  font-family: constantia;
+  font-size: 32px;
+  text-align: center;
+  line-height: 1.5;
+  width: 300px;
+  margin: 48px auto 24px;
+  letter-spacing: .1em;
+  background-color: #ce5858;
+}
+
+.work img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.work p{
+  line-height: 2;
+  margin: 12px 8px 24px;
+}
+
+.work + .work{
+  margin-top: 64px;
+}
+
+.notice{
+  margin-top: 64px;
+}
+
+.notice .notice-child a{
+  display: block;
+  margin: 12px auto 24px;
+  color: #f7a02f;
+}
+
+.notice .notice-child a:hover{
+  text-decoration: underline;
+}
+
+.overview table{
+  width: 400px;
+  margin: 0 auto;
+}
+
+.overview td{
+  outline: 1px solid #eee;
+  padding-left: 12px;
+  line-height: 2;
+}
+
+.overview td:nth-child(odd){
+  width: 30%;
+  background-color: #da0505;
+}
+
+.google{
+  font-size: 36px;
+  margin: 36px auto;
+  width: 90%;
+  line-height: 6;
+  text-align: center;
+  background-color: purple;
+}
+
+footer small{
+  display: block;
+  font-size: 16px;
+  padding-bottom: 112px;
+  background-color: #888;
+  text-align: center;
+  line-height: 5;
+  color: black;
+}
