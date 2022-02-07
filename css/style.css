@@ -3,6 +3,7 @@ body{
   background-color: black;
   color: #fff;
   font-family: 'Courier New', Courier, monospace;
+  /* overflow: hidden; */
 }
 
 h1, h2, p{
@@ -144,11 +145,11 @@ nav a:hover{
 .contact a{
   display: inline-block;
   font-family: constantia;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: bold;
   width: 50%;
   margin: 0 auto;
-  line-height: 3;
+  line-height: 4;
 }
 
 .contact a + a{
@@ -160,23 +161,24 @@ nav a:hover{
 }
 
 header{
+  position: relative;
   height: 600px;
   text-align: center;
 }
 
 header img{
   width: 100%;
-  height: 100%;
+  height: 600px;
   object-fit: cover;
 }
 
 header p{
   position: absolute;
   top: auto;
-  bottom: 200px;
+  bottom: 25%;
   left: 0;
   right: 0;
-  font-size: 24px;
+  font-size: 18px;
   margin: 36px auto;
   width: 60%;
   line-height: 3;
@@ -185,19 +187,20 @@ header p{
 
 .rec{
   position: relative;
-  width: 80%;
+  width: 100%;
   margin: 24px auto;
   text-align: center;
 }
 
 .rec img{
   width: 100%;
-  height: 100%;
+  height: 400px;
+  object-fit: cover;
 }
 
 .rec div{
   position: absolute;
-  top: 36px;
+  top: 20%;
   bottom: 0;
   left: 0;
   right: 0;
@@ -207,12 +210,15 @@ header p{
   font-family: constantia;
   font-size: 28px;
   letter-spacing: .1em;
-  padding-top: 12px;
 }
 
 .rec p{
   margin: 24px auto;
   font-weight: bold;
+}
+
+.rec p + p{
+  margin-bottom: 48px;
 }
 
 .work, .notice{
@@ -263,7 +269,7 @@ header p{
 }
 
 .overview table{
-  width: 400px;
+  width: 360px;
   margin: 0 auto;
 }
 
@@ -290,7 +296,7 @@ header p{
 footer small{
   display: block;
   font-size: 16px;
-  padding-bottom: 112px;
+  padding-bottom: 100px;
   background-color: #888;
   text-align: center;
   line-height: 5;
